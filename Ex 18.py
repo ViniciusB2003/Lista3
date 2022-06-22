@@ -1,5 +1,5 @@
 def data_cal(dia,mes,ano):
-    while (dia <= 0 or dia >= 31) and (mes <= 0 and mes > 12) and (ano <= 0):
+    if (dia <= 0 or dia >= 31) or (mes <= 0 and mes > 12) or (ano <= 0):
         return print('NULL')
     if mes == 1:
         mes = 'Janeiro'
@@ -27,4 +27,9 @@ def data_cal(dia,mes,ano):
         mes = 'Dezembro'
     dataf = dia, ' de ', mes, ' de ', ano
     return dataf
-datai = int(input('Digite a data:',)
+D, M, A = input('Digite uma data no formato D/M/A: ').split("/")
+D = int(D)
+M = int(M)
+A = int(A)
+datai = data_cal(D, M, A)
+print(datai)
