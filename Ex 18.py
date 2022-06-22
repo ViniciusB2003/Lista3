@@ -1,5 +1,5 @@
 def data_cal(dia,mes,ano):
-    if (dia <= 0 or dia >= 31) or (mes <= 0 and mes > 12) or (ano <= 0):
+    if (dia <= 0 or dia >= 31) or (mes <= 0 or mes > 12) or (ano <= 0):
         return print('NULL')
     if mes == 1:
         mes = 'Janeiro'
